@@ -4,6 +4,7 @@
     --couleur-fond: white;
     --couleur-texte: lightsmoke;
     --famille-police: "IBM Plex Mono", Arial, sans-serif;
+    --couleur-bordure: coral;
 }
 /* Initialisation des styles de base dans le corps du site */
 body {
@@ -50,6 +51,43 @@ ul {
 }
 input {
     display: none;
+}
+/* Initialisation d'un grid pour les trois missions */
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px; /* 'gap' replaces 'grid-gap' */
+  grid-auto-rows: minmax(100px, auto);
+}
+
+.mission1-container, .mission2-container, .mission3-container {
+    padding: 10px;
+
+
+}
+.mission1-container {
+  grid-column: 1;
+  grid-row: 1;
+  background-color: var(--couleur-bordure);
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.mission2-container {
+  grid-column: 2;
+  grid-row: 1;
+  background-color: var(--couleur-bordure);
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.mission3-container {
+  grid-column: 3;
+  grid-row: 1;
+  background-color: var(--couleur-bordure);
+  border-radius: 15px;
+  padding: 10px;
 }
 
 
