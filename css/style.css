@@ -55,39 +55,37 @@ input {
 /* Initialisation d'un grid pour les trois missions */
 
 .container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px; /* 'gap' replaces 'grid-gap' */
-  grid-auto-rows: minmax(100px, auto);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px; /* 'gap' replaces 'grid-gap' */
+    grid-auto-rows: minmax(100px, auto);
 }
 
-.mission1-container, .mission2-container, .mission3-container {
+.container1, .container2, .container3 {
     padding: 10px;
-
-
 }
-.mission1-container {
-  grid-column: 1;
-  grid-row: 1;
-  background-color: var(--couleur-bordure);
-  border-radius: 15px;
-  padding: 10px;
+.container1 {
+    grid-column: 1;
+    grid-row: 1;
+    background-color: var(--couleur-bordure);
+    border-radius: 15px;
+    padding: 10px;
 }
 
-.mission2-container {
-  grid-column: 2;
-  grid-row: 1;
-  background-color: var(--couleur-bordure);
-  border-radius: 15px;
-  padding: 10px;
+.container2 {
+    grid-column: 2;
+    grid-row: 1;
+    background-color: var(--couleur-bordure);
+    border-radius: 15px;
+    padding: 10px;
 }
 
-.mission3-container {
-  grid-column: 3;
-  grid-row: 1;
-  background-color: var(--couleur-bordure);
-  border-radius: 15px;
-  padding: 10px;
+.container3 {
+    grid-column: 3;
+    grid-row: 1;
+    background-color: var(--couleur-bordure);
+    border-radius: 15px;
+    padding: 10px;
 }
 
 
@@ -118,5 +116,12 @@ input {
     }
     .barre-navigation #enable:checked ~  ul {
         display: flex;
+    }
+    .container {
+    display: block;
+    }
+    .container1, .container2, .container3{
+        margin-top: 10px;
+        font-size: 1rem;
     }
 }
