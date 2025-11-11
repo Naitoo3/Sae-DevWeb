@@ -1,10 +1,11 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
+    <title>Rapport de projet pour Kdou</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/style.css" type="text/css" rel="stylesheet">
-    <title>Les missions réalisées</title>
+    <link rel="icon" href="Assets/img/paris_logo.jpg"> <!-- Image favicon pour l'onglet et appel de la page de styles -->
+    <link href="Assets/css/style.css" type="text/css" rel="stylesheet">
 </head>
 
 <body>
@@ -27,42 +28,64 @@
     </nav>
 </header>
 
-<!--Contenu de la page web internet -->
+
 <section>
-    <h1>
-        Les missions réalisées pour l'entreprise Française Kdou.
-    </h1>
-
-
-
-    <!-- Initialisation d'un élement de type FLEX-->
+    <!--Présentation de l'ensemble des missions -->
     <div class="flex-missions">
-        <h2>Le contenu de nos missions réalisées</h2>
+        <h1>Le contenu de nos missions réalisées</h1>
         <p>
             Cette mission a été réalisée dans le but de permettre à l'entreprise d'analyser l'ensemble
             de ses données et de déterminer les solutions écologiques et les plus aproppriées pour stocker ses données.
         </p>
-
-        <!--Initialisation d'un élément de type grid pour stocker les 3 missions réalisées par Kdou.-->
-        <div class="container">
-            <div class="mission1-container">
-                <h1>MIssion1</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem consequatur unde debitis tempore officiis reprehenderit! Maxime reprehenderit cumque labore in, iusto a tempore repellendus molestias voluptate modi fugit quam fuga?</p>
-            </div>
-
-            <div class="mission2-container">
-                <h1>Mission 2</h1>
-                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe alias eum facilis reprehenderit assumenda perferendis cum nesciunt quaerat nisi doloremque in, eaque explicabo laudantium. Quibusdam natus dicta laudantium! At, possimus!</p>
-            </div>
-
-            <div class="mission3-container">
-                <h1>Mission 3</h1>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto totam praesentium ipsum, soluta mollitia quam nostrum tempora nulla rem eveniet nam quos quo, delectus iste reiciendis repellendus. Enim, nostrum provident?</p>
-            </div>
-
+        <br><br><br><br>
+        <!-- Mission 1 -->
+        <div id="mission1">
+            <h2>La première mission</h2>
+            <p>
+                Cette mission consistait à analyser la base de donnée de "Kdou", comprendre son fonctionnement et proposer des
+                solutions innovantes pour permettre d'améliorer son fonctionnement et l'intégrité des données présentes dessus.
+            </p>
+            <p>
+                Nous avons ainsi observé les flux de données, l’architecture existante ainsi que les coûts associés.
+                Ce travail a permis de produire des recommandations concrètes concernant l’infrastructure et la gestion des ressources numériques.
+            </p>
         </div>
+        <br><br><br><br>
+        <!-- Mission 2 -->
+        <div id="mission2">
+            <h2>Mission 2</h2>
+            <p>
+                Cette mission s’est orientée vers la comparaison de plusieurs solutions de stockage Cloud.
+                L’objectif était de trouver l’équilibre idéal entre performance, sécurité, coût et impact environnemental.
+            </p>
+            <p>
+                Plusieurs fournisseurs internationaux ont été analysés au travers d’indicateurs comme la consommation énergétique,
+                la localisation des serveurs, le type d’énergie utilisée, ainsi que les certifications vertes éventuelles.
+            </p>
+        </div>
+        <br><br><br><br>
+        <!-- Mission 3 -->
+        <div id="mission3">
+            <h2>Mission 3</h2>
+            <p>
+                La dernière mission s’est concentrée sur la mise en œuvre des solutions retenues, ainsi que sur
+                la formation des équipes internes à leur usage.
+            </p>
+            <p>
+                Nous avons accompagné l’entreprise dans la migration progressive des données,
+                l’adaptation des outils, ainsi que la sensibilisation des salariés aux bonnes pratiques de sobriété numérique.
+            </p>
+        </div>
+
     </div>
 </section>
-<footer>IUT de Paris.</footer>
+
+<!--Footer pour la fin de page-->
+<footer class="footer">
+    <div>
+        <img src="Assets/img/paris_logo.jpg" alt="Image du logo de l'Université Paris cité." class="footer">
+        <p>Université Paris Cité, 2025-2026, SAE S1.02 S1.05</p>
+    </div>
+</footer>
 </body>
 </html>
