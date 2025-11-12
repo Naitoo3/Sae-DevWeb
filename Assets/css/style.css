@@ -168,4 +168,17 @@ input {
 
 
 /* styles pour la page mission */
+#mission1, #mission2, #mission3 {
+    font-size: 1.2rem;
+}
+/* STYLES POUR LA PAGE OUTILS */
 
+
+.img-container1,.img-container3 {
+    width: 5%;
+    height: 5%;
+}
+.img-container2{
+    width: 15%;
+    height: 15%;
+}
