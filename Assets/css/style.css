@@ -1,7 +1,5 @@
 /* On importe une police de texte */
-
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
-
 
 /* Initialisation de variables couleur dans la pseudo classe root */
 :root {
@@ -21,7 +19,8 @@ body {
     background-color: var(--couleur-fond);
     color: var(--couleur-texte);
 }
-/* Paramètres pour la page de navigation, universel à l'ensemble des pages web */
+
+/* Paramètres pour la page de navigation */
 .barre-navigation {
     background-color: #3e4855;
     top: auto;
@@ -44,14 +43,14 @@ ul {
 .barre-navigation ul li a {
     text-decoration: none;
     color: #ffffff;
-    font-family: var(--famille-police-titre), sans-serif; /* Appel de la variable pour régler une police de texte */
+    font-family: var(--famille-police-titre), sans-serif;
     font-size: large;
     font-weight: bold;
     position: relative;
     cursor: pointer;
 }
 
-/* On ajoute une propriété pour animer une ligne en dessous des éléments de la navbar lors du survol. */
+/* Effet lors du survol des liens dans la barre de navigation */
 .barre-navigation ul li a::after {
     content: "";
     position: absolute;
@@ -60,9 +59,9 @@ ul {
     bottom: -10px;
     height: 3px;
     background-color: #8585ad;
-    transition: 0.3s; /* On applique un effet de fade in de 3 millisecondes */
-
+    transition: 0.3s;
 }
+
 .barre-navigation ul li a:hover::after {
     width: 100%;
 }
@@ -77,9 +76,7 @@ input {
     display: none;
 }
 
-
-/* Initialisation d'un grid pour les trois missions dans la page index */
-
+/* Paramètres pour le grid et la lévitation des grilles */
 .container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -87,19 +84,33 @@ input {
     grid-auto-rows: minmax(100px, auto);
 }
 
-.container1, .container2, .container3 {
+.container1,
+.container2,
+.container3 {
     padding: 10px;
     background-color: #ffe1d6;
     border-radius: 15px;
     text-decoration: none;
 
+
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
+
+
+.container1:hover,
+.container2:hover,
+.container3:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
 .container a {
     position: relative;
     text-decoration: none;
     color: black;
 }
-/*Ajout d'un effet de survol pour les titres dans le grid */
+
+/* Effet lors du survol des grilles */
 .container a::after {
     content: "";
     position: absolute;
@@ -110,7 +121,6 @@ input {
     background-color: #8585ad;
     transition: width 0.3s ease;
 }
-
 
 .container1 {
     grid-column: 1;
@@ -131,15 +141,19 @@ input {
     width: 100%;
     cursor: pointer;
 }
+
 .footer {
     margin-top: 40px;
     padding: 20px 0;
-    width: 20%;
-    height: 20%;
+    width: 30%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
-/* Initialisation des medias queries pour les écrans mobile */
+
+/* media queries pour les styles sur mobile */
 @media screen and (max-width: 792px) {
-    /* Paramètres pour adapter la barre de navigation aux écrans mobile */
+
     body {
         font-size: 1.1rem;
     }
@@ -170,7 +184,7 @@ input {
         padding: 10px;
     }
 
-    .barre-navigation #enable:checked ~ ul {
+    .barre-navigation #enable:checked~ul {
         display: flex;
     }
 
@@ -178,7 +192,9 @@ input {
         display: block;
     }
 
-    .container1, .container2, .container3 {
+    .container1,
+    .container2,
+    .container3 {
         margin-top: 10px;
         font-size: 1rem;
     }
@@ -186,23 +202,25 @@ input {
     .footer {
         width: 50%;
         height: 20%;
-        margin-top: 40px;
+        margin: 0 auto;
     }
 }
 
-
 /* styles pour la page mission */
-#mission1, #mission2, #mission3 {
+#mission1,
+#mission2,
+#mission3 {
     font-size: 1.2rem;
 }
+
 /* STYLES POUR LA PAGE OUTILS */
-
-
-.img-container1,.img-container3 {
+.img-container1,
+.img-container3 {
     width: 5%;
     height: 5%;
 }
-.img-container2{
+
+.img-container2 {
     width: 15%;
     height: 15%;
 }
