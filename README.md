@@ -1,5 +1,5 @@
 # Information
-SAÉ de Développement Web réalisée dans le cadre d'un projet de groupe pour l'Université Paris Cité pour l'année 2025-2026.
+SAÉ de Développement Web réalisée dans le cadre d'un projet de groupe pour **l'Université Paris Cité** pour l'année 2025-2026.
 
 
 # Mise en route
