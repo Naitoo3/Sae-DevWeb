@@ -39,74 +39,65 @@
         </p>
         <br><br><br><br>
         <!-- Affichage de type grid -->
-        <!-- Mission 1 -->
-        <div id="mission1">
-            <h2>La première mission</h2>
-            <p>
-                Cette mission consistait à analyser la base de donnée de "Kdou", comprendre son fonctionnement et proposer des
-                solutions innovantes pour permettre d'améliorer son fonctionnement et l'intégrité des données présentes dessus. Ainsi, l'analyse de leur base de données
-                nous a permis de comprendre son fonctionnement, les contraintes d'intégrités entre chaque table, et commencer à créer des requêtes.
-            </p>
-        </div>
-        <br><br><br><br>
-        <!-- Mission 2 -->
-        <div id="mission2">
-            <h2>Mission 2</h2>
-            <p>
-                Cette mission s’est orientée vers une analyse plus profonde de la BDD et la conception de requêtes plus complexes afin de déterminer l'ensemble des fournisseurs
-                et connaitre plusieurs indicateurs comme leur chiffre d'affaires, la disponibilité de leurs produits en France ou en Europe, ou notamment les pays d'origines des fournisseurs,
-                les contacts clients par exemple.
+        <div class="container">
+            <!-- Mission 1 -->
+            <div class="container1">
+                <h2><a href="#">La première mission</a></h2>
+                <p>
+                    Cette mission consistait à analyser la base de donnée de "Kdou", comprendre son fonctionnement et proposer des
+                    solutions innovantes pour permettre d'améliorer son fonctionnement et l'intégrité des données présentes dessus. Ainsi, l'analyse de leur base de données
+                    nous a permis de comprendre son fonctionnement, les contraintes d'intégrités entre chaque table, et commencer à créer des requêtes.
+                </p>
+            </div>
 
-            </p>
-            <p>
-                Plusieurs fournisseurs internationaux et Européens ont été analysés afin de permettre à trouver dans l'ensemble du catalogue des produits qui sont parfaitement adapté
-                à chaque utilisation, ou chaque demande. Ainsi, pour répondre à ces demandes, nous avons dû rédiger du code, en voici un exemple : </p>
-                <code>
-                SELECT DISTINCT
-                    <br>
-                Year(Commande.DateCde) AS Annee,
-                    <br>
-                Categorie.NomCateg,
-                    <br>
-                SUM(Produit.[CoutAchat] * DetailCommande.[Quantite]) AS Chiffre_Affaire
-                    <br>
-                FROM
-                    <br>
-                (
-                Categorie
-                INNER JOIN Produit ON Categorie.CodeCateg = Produit.CodeCateg
-                    <br>
-                    )
-                INNER JOIN (
-                Commande
-                INNER JOIN DetailCommande ON Commande.NCommande = DetailCommande.NCommande
-                ) ON Produit.RefProd = DetailCommande.RefProd
-                    <br>
-                WHERE
-                (((Categorie.CodeCateg) IN (1, 3)))
-                    <br>
-                GROUP BY
-                Year(Commande.DateCde),
-                Categorie.NomCateg;</code>
+            <!-- Mission 2 -->
+            <div class="container2">
+                <h2><a href="#">Mission 2</a></h2>
+                <p>
+                    Cette mission s’est orientée vers une analyse plus profonde de la BDD et la conception de requêtes plus complexes afin de déterminer l'ensemble des fournisseurs
+                    et connaitre plusieurs indicateurs comme leur chiffre d'affaires, la disponibilité de leurs produits en France ou en Europe, ou notamment les pays d'origines des fournisseurs,
+                    les contacts clients par exemple.
+                </p>
+                <p>
+                    Plusieurs fournisseurs internationaux et Européens ont été analysés afin de permettre à trouver dans l'ensemble du catalogue des produits qui sont parfaitement adapté
+                    à chaque utilisation, ou chaque demande. Ainsi, pour répondre à ces demandes, nous avons dû rédiger du code, en voici un exemple :
+                </p>
+                <pre><code>
+SELECT DISTINCT
+Year(Commande.DateCde) AS Annee,
+Categorie.NomCateg,
+SUM(Produit.[CoutAchat] * DetailCommande.[Quantite]) AS Chiffre_Affaire
+FROM
+(
+Categorie
+INNER JOIN Produit ON Categorie.CodeCateg = Produit.CodeCateg
+)
+INNER JOIN (
+Commande
+INNER JOIN DetailCommande ON Commande.NCommande = DetailCommande.NCommande
+) ON Produit.RefProd = DetailCommande.RefProd
+WHERE
+Categorie.CodeCateg IN (1, 3)
+GROUP BY
+Year(Commande.DateCde),
+Categorie.NomCateg;
+        </code></pre>
+            </div>
 
+            <!-- Mission 3 -->
+            <div class="container3">
+                <h2><a href="#">Mission 3</a></h2>
+                <p>
+                    La dernière mission s’est concentrée sur la mise en œuvre des solutions retenues, c'est-à-dire, la création de requêtes SQL adaptées à chaque contexte
+                    afin de pouvoir obtenir des résultats précis. Alors, les requêtes peuvent également servir pour obtenir des renseignements sur les catégories comme
+                    les boissons ou dans la santé, ou identifier des produits peu vendus rapport au reste des articles dans le catalogue.
+                </p>
+                <p>
+                    Le code ci-dessus est un exemple notable des missions que nous avions dû réaliser pour "Kdou" afin qu'elle puisse
+                    obtenir à nouveau des renseignements et des informations sur son Chiffre d'affaires, ses clients, et ses fournisseurs.
+                </p>
+            </div>
         </div>
-        <br><br><br><br>
-        <!-- Mission 3 -->
-        <div id="mission3">
-            <h2>Mission 3</h2>
-            <p>
-                La dernière mission s’est concentrée sur la mise en œuvre des solutions retenues, c'est-à-dire, la création de requêtes SQL adaptées à chaque contexte
-                afin de pouvoir obtenir des résultats précis. Alors, les requêtes peuvent également servir pour obtenir des renseignements sur les catégories comme
-                les boissons ou dans la santé, ou identifier des produits peu vendus rapport au reste des articles dans le catalogue.
-            </p>
-            <p>
-                Le code ci-dessus est un exemple notable des missions que nous avions dû réaliser pour "Kdou" afin qu'elle puisse
-                obtenir à nouveau des renseignements et des informations sur son Chiffre d'affaires, ses clients, et ses fournisseurs.
-            </p>
-        </div>
-        </div>
-
-    </div>
 </section>
 
 <!--Footer pour la fin de page-->
