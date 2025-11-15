@@ -60,7 +60,34 @@
             </p>
             <p>
                 Plusieurs fournisseurs internationaux et Européens ont été analysés afin de permettre à trouver dans l'ensemble du catalogue des produits qui sont parfaitement adapté
-                à chaque utilisation, ou chaque demande.
+                à chaque utilisation, ou chaque demande. Ainsi, pour répondre à ces demandes, nous avons dû rédiger du code, en voici un exemple : </p>
+                <code>
+                SELECT DISTINCT
+                    <br>
+                Year(Commande.DateCde) AS Annee,
+                    <br>
+                Categorie.NomCateg,
+                    <br>
+                SUM(Produit.[CoutAchat] * DetailCommande.[Quantite]) AS Chiffre_Affaire
+                    <br>
+                FROM
+                    <br>
+                (
+                Categorie
+                INNER JOIN Produit ON Categorie.CodeCateg = Produit.CodeCateg
+                    <br>
+                    )
+                INNER JOIN (
+                Commande
+                INNER JOIN DetailCommande ON Commande.NCommande = DetailCommande.NCommande
+                ) ON Produit.RefProd = DetailCommande.RefProd
+                    <br>
+                WHERE
+                (((Categorie.CodeCateg) IN (1, 3)))
+                    <br>
+                GROUP BY
+                Year(Commande.DateCde),
+                Categorie.NomCateg;</code>
             </p>
         </div>
         <br><br><br><br>
